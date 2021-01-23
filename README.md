@@ -24,5 +24,3 @@
 7. 노쇼일 경우 경고 현황과 좌석예약,스터디룸 예약 현황을 확인할 수 있는 "My카페" 페이지
 ![image](https://user-images.githubusercontent.com/47858282/72890056-69cfe180-3d54-11ea-862d-dcfe8b08573d.png)
 
-
-자세한 내용은 해당 링크에 동영상과 설명을 첨부하였습니다. https://hohodu.tistory.com/6
