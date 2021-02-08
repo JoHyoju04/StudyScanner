@@ -6,10 +6,13 @@
 ![image](https://user-images.githubusercontent.com/47858282/107242155-07d13f80-6a6f-11eb-9d87-19983838928a.png)
 
 # 기술스택
-백앤드
--JDBC API
--Java
--MySQL
+### 백앤드
+
+ - JDBC API
+
+ - Java
+
+ - MySQL
 
 # Usage example
 1. 메인 페이지
