@@ -12,38 +12,22 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
-/**
- * Application Lifecycle Listener implementation class DBConnectionManage
- *
- */
 @WebListener
 public class DBConnectionManage implements ServletContextListener {
 
-    /**
-     * Default constructor. 
-     */
     public DBConnectionManage() {
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-     * @see ServletContextListener#contextDestroyed(ServletContextEvent)
-     */
     public void contextDestroyed(ServletContextEvent sce)  { 
     	Connection conn = (Connection) sce.getServletContext().getAttribute("DBconnection");
     	
     	try {
 			conn.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }
 
-	/**
-     * @see ServletContextListener#contextInitialized(ServletContextEvent)
-     */
-    
     public void contextInitialized(ServletContextEvent sce)  { 
     	Connection conn = null;
 		Properties connectionProps = new Properties();
@@ -60,7 +44,6 @@ public class DBConnectionManage implements ServletContextListener {
 			conn = DriverManager.getConnection(url, connectionProps);
 			if (conn != null) sc.setAttribute("DBconnection", conn);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }

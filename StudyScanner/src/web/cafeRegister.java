@@ -19,26 +19,16 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import model.DBUtil;
 
-/**
- * Servlet implementation class cafeRegister
- */
 @WebServlet("/cafeRegister")
 public class cafeRegister extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
     public cafeRegister() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
 		request.setCharacterEncoding("UTF-8");
 		
 		HttpSession session=request.getSession();
@@ -60,7 +50,6 @@ public class cafeRegister extends HttpServlet {
 
 			s_photo1= multi.getFilesystemName("s_photo1");//업로드 이름
 			String s_photodb1="/upload/"+s_photo1;//업로드 이름
-			//String org1 = multi.getOriginalFileName("s_photo"); //업로드 된 이름
 			
 			s_photo2= multi.getFilesystemName("s_photo2");
 			String s_photodb2="/upload/"+s_photo2;
@@ -69,10 +58,6 @@ public class cafeRegister extends HttpServlet {
 			String s_photodb3="/upload/"+s_photo3;
 				
 			Connection conn= (Connection) sc.getAttribute("DBconnection");
-			
-			System.out.println(s_tel);
-			System.out.println(s_price);
-			System.out.println(s_time);
 			
 			String s_id=(String)session.getAttribute("s_id");
 			int check=DBUtil.createCafeInfo(conn,s_id,s_photodb1,s_photodb2,s_photodb3,s_tel,s_price,s_time);
@@ -92,11 +77,8 @@ public class cafeRegister extends HttpServlet {
 			
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
 		doGet(request, response);
 	}
 

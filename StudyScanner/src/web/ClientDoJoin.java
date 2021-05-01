@@ -14,24 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.DBUtil;
 
-/**
- * Servlet implementation class ClientDoJoin
- */
 @WebServlet("/ClientDoJoin")
 public class ClientDoJoin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
     public ClientDoJoin() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		String name = request.getParameter("c_name");
@@ -54,11 +44,9 @@ public class ClientDoJoin extends HttpServlet {
 			out.flush();
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
 		doGet(request, response);
 	}
 

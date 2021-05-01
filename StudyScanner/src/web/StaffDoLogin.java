@@ -17,24 +17,15 @@ import javax.servlet.http.HttpSession;
 
 import model.DBUtil;
 
-/**
- * Servlet implementation class StaffDoLogin
- */
 @WebServlet("/StaffDoLogin")
 public class StaffDoLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
     public StaffDoLogin() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		
@@ -55,15 +46,7 @@ public class StaffDoLogin extends HttpServlet {
 			
 			ResultSet rs = DBUtil.findSUser(conn, uid);
 		
-//		String uid = request.getParameter("s_id");
-//		String passwd = request.getParameter("s_passwd");
-//		
-//		ServletContext sc = getServletContext();
-//		Connection conn= (Connection) sc.getAttribute("DBconnection");
-//		
-//		ResultSet rs = DBUtil.findSUser(conn, uid);
-		
-		
+
 		if(rs==null) {
 			out.println("<script>alert('가입하지 않은 아이디입니다.'); location.href='s_Login.jsp';</script>");
 		}
@@ -86,17 +69,14 @@ public class StaffDoLogin extends HttpServlet {
 					// invalid user
 					out.println("<script>alert('가입하지 않은 아이디입니다.'); location.href='s_Login.jsp';</script>");
 				}			
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+			}
+			catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
-		}
-	}
+		
+    }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
