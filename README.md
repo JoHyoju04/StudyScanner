@@ -2,6 +2,18 @@
 고객에게 실시간 좌석현황을 제공하여 스터디 카페에 직접 방문하지 않아도 남아있는 좌석을 알 수 있도록 하여
 시간과 공간의 제약없이 원하는 날짜와 시간에 개인좌석 및 스터디룸을 예약할 수 있는 기능을 제공하는 웹페이지이다.
 
+# 사용 시나리오
+![image](https://user-images.githubusercontent.com/47858282/107242155-07d13f80-6a6f-11eb-9d87-19983838928a.png)
+
+# 기술스택
+### 백앤드
+
+ - JDBC API
+
+ - Java
+
+ - MySQL
+
 # Usage example
 1. 메인 페이지
 ![image](https://user-images.githubusercontent.com/47858282/72887288-bd3f3100-3d4e-11ea-9c68-f65b436b51c9.png)
@@ -23,4 +35,3 @@
 
 7. 노쇼일 경우 경고 현황과 좌석예약,스터디룸 예약 현황을 확인할 수 있는 "My카페" 페이지
 ![image](https://user-images.githubusercontent.com/47858282/72890056-69cfe180-3d54-11ea-862d-dcfe8b08573d.png)
-
